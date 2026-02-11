@@ -1,0 +1,29 @@
+{
+  "name": "orbyt theme",
+  "component": false,
+  "license_url": null,
+  "about_url": null,
+  "authors": "jack.orbyt.video",
+  "theme_version": "1.0",
+  "minimum_discourse_version": null,
+  "maximum_discourse_version": null,
+  "assets": {
+    "Figtree-Regular": "assets/Figtree-Regular.woff2",
+    "Figtree-Italic": "assets/Figtree-Italic.woff2",
+    "Figtree-Medium": "assets/Figtree-Medium.woff2",
+    "Figtree-MediumItalic": "assets/Figtree-MediumItalic.woff2",
+    "Figtree-SemiBold": "assets/Figtree-SemiBold.woff2",
+    "Figtree-SemiBoldItalic": "assets/Figtree-SemiBoldItalic.woff2",
+    "Figtree-Bold": "assets/Figtree-Bold.woff2",
+    "Figtree-BoldItalic": "assets/Figtree-BoldItalic.woff2",
+    "Figtree-Light": "assets/Figtree-Light.woff2",
+    "Figtree-LightItalic": "assets/Figtree-LightItalic.woff2",
+    "Figtree-ExtraBold": "assets/Figtree-ExtraBold.woff2",
+    "Figtree-ExtraBoldItalic": "assets/Figtree-ExtraBoldItalic.woff2",
+    "Figtree-Black": "assets/Figtree-Black.woff2",
+    "Figtree-BlackItalic": "assets/Figtree-BlackItalic.woff2"
+  },
+  "color_schemes": {},
+  "modifiers": {},
+  "learn_more_link": "https://github.com/discourse/discourse-developer-docs/blob/main/docs/05-themes-components/06-theme-structure.md"
+}

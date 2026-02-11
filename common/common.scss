@@ -1,0 +1,207 @@
+/**
+ * Orbyt Discourse theme – common styles
+ * Figtree font, dark background, Orbyt green usernames & category labels.
+ * Assets (fonts) are declared in about.json and resolved by Discourse.
+ */
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   Figtree @font-face (assets from about.json)
+   ═══════════════════════════════════════════════════════════════════════════ */
+@font-face {
+  font-family: "Figtree";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url($Figtree-Regular) format("woff2");
+}
+@font-face {
+  font-family: "Figtree";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url($Figtree-Italic) format("woff2");
+}
+@font-face {
+  font-family: "Figtree";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url($Figtree-Medium) format("woff2");
+}
+@font-face {
+  font-family: "Figtree";
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url($Figtree-MediumItalic) format("woff2");
+}
+@font-face {
+  font-family: "Figtree";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url($Figtree-SemiBold) format("woff2");
+}
+@font-face {
+  font-family: "Figtree";
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url($Figtree-SemiBoldItalic) format("woff2");
+}
+@font-face {
+  font-family: "Figtree";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url($Figtree-Bold) format("woff2");
+}
+@font-face {
+  font-family: "Figtree";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url($Figtree-BoldItalic) format("woff2");
+}
+@font-face {
+  font-family: "Figtree";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url($Figtree-Light) format("woff2");
+}
+@font-face {
+  font-family: "Figtree";
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url($Figtree-LightItalic) format("woff2");
+}
+@font-face {
+  font-family: "Figtree";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url($Figtree-ExtraBold) format("woff2");
+}
+@font-face {
+  font-family: "Figtree";
+  font-style: italic;
+  font-weight: 800;
+  font-display: swap;
+  src: url($Figtree-ExtraBoldItalic) format("woff2");
+}
+@font-face {
+  font-family: "Figtree";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url($Figtree-Black) format("woff2");
+}
+@font-face {
+  font-family: "Figtree";
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+  src: url($Figtree-BlackItalic) format("woff2");
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   CSS variables + base
+   ═══════════════════════════════════════════════════════════════════════════ */
+:root {
+  --font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --secondary: #1a1d24;
+  --secondary-hover: #22262e;
+  --secondary-very-low: #14171c;
+  --primary: #e8e9ec;
+  --tertiary: #01f5b3;
+  --tertiary-hover: #38ffc6;
+}
+
+html,
+body,
+.d-wrap,
+.d-header,
+.d-header-wrap,
+.d-main,
+.topic-body,
+.cooked,
+.topic-list,
+.topic-post,
+.badge-category__name,
+.nav-pills a,
+.btn,
+.input-xxlarge,
+.select-kit,
+.d-editor-container,
+.d-editor-textarea-wrapper,
+.d-editor-input,
+#reply-control .reply-to,
+.d-modal,
+.d-modal-body,
+.admin-content,
+.d-dropdown,
+.menu-panel {
+  font-family: var(--font-family) !important;
+}
+
+.d-wrap,
+body {
+  background-color: #1a1d24 !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   Usernames / profile handles → Orbyt green (#01f5b3)
+   ═══════════════════════════════════════════════════════════════════════════ */
+body .topic-list .main-link .username,
+body .topic-list a.username,
+body .topic-body .username,
+body .topic-post .username,
+body .topic-post .poster .username a,
+body .topic-post a.username,
+body .cooked .username,
+body .cooked a.username,
+body .topic-post .poster .user-link,
+body .topic-post .poster .user-link a,
+body .topic-post .post-info .username a,
+.topic-meta-data .username a,
+.topic-meta-data a.username,
+body .username,
+body a.username,
+body span.username,
+body .mention,
+body a.mention,
+body .mention-link,
+body .cooked .mention,
+body .user-card .username,
+body .user-card .user-card-username,
+body .user-card a.username {
+  color: #01f5b3 !important;
+}
+
+body a.username:hover,
+body .username:hover,
+body .mention:hover,
+body .user-link a:hover,
+body .topic-post .poster a:hover {
+  color: #38ffc6 !important;
+}
+
+html body .first.username,
+html body .poster .username,
+html body a[data-user-card].username,
+html body .topic-list .username,
+html body .user-link .username {
+  color: #01f5b3 !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   Category badge labels → Orbyt green text
+   ═══════════════════════════════════════════════════════════════════════════ */
+body .badge-category__name,
+body .badge-category .badge-category__name,
+.badge-category__wrapper .badge-category__name,
+body .badge-category__wrapper .badge-category__name {
+  color: #01f5b3 !important;
+}
